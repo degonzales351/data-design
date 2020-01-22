@@ -24,10 +24,10 @@ CREATE TABLE profile (
 	profileHash CHAR(97) NOT NULL,
 	profilePhone VARCHAR(32),
 	-- to make sure duplicate data cannot exist, create a unique index
+	PRIMARY KEY(profileId),
 	UNIQUE(profileAtHandle),
-	UNIQUE(profileEmail),
+	UNIQUE(profileEmail)
 	-- this officiates the primary key for the entity
-	PRIMARY KEY(profileId)
 );
 
 -- create the tweet entity
